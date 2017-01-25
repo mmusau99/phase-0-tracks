@@ -14,3 +14,4 @@
 `A merge conflict is when commits in your current branch are not in other branches nad vice versa. Simply put, commits on branches have diverged.
 `
 ** Just adding a comment for Release 2 Emmanuel: mechamanny
+** test change
