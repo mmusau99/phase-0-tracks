@@ -17,3 +17,6 @@ A commit includes your changes of the current branch to the repository. A good c
 
 A merge conflict is when two code sets are trying to merge different data into the place on the master. Solve by finding the conflict, marking it and designing a strategy to proceed.
 
+
+
+>> Here is some new content for yo consideration 
