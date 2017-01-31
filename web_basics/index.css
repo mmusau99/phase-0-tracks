@@ -1,0 +1,9 @@
+main h1 {
+	font-family: helvetica;
+	font-style: italic;
+}
+.col-md-4 img {
+	height: 500px;
+	padding: 10px;
+	
+}
