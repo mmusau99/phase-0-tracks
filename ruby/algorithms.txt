@@ -1,0 +1,33 @@
+Elevator algorithm program {
+1. read all numbers on display in the elevator
+2. save all numbers in a directory.
+3. take a step forward until your within touching distance of the buttons
+4. click the button that corresponds with the floor you would like to got to.
+5.if you wouldn't like to go to a floor exit the elevator. otherwise follow the following steps.
+6. once the button has been clicked wait for the doors to close.
+7. continue to wait until the elevator reaches the designated floor and the doors open.
+8. once the doors open walk out of the elevator
+9. you have now reached the floor you desingated.
+10.end
+
+
+}
+
+Making a frozen pizza{
+	1. take pizza out of box
+	2. use a knife or sharp utensil to remove plastic layering.
+	3. put on the pizza on a heatable tray.
+	4. pre-heat the oven at 350 degrees.
+	5. Wait 15 minutes.
+	6. open the over.
+	7. take the pizza on the heatble tray and place it on the rack.
+	8. close the oven door.
+	9. set a timer for 27 minutes.
+	10. wait 27 minutes.
+	11. go to the oven and open it once again.
+	12. take out the pizza and place it on the counter.
+	13. go back to the oven and turn it off.
+	14. close the oven door.
+	15. end
+
+}
