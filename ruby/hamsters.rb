@@ -26,9 +26,9 @@ def hamsters (str)
 
 puts "Hamster name: #{h_name}" 
 puts "Volume level: #{v_level}" 
-puts "fur color is: #{fur_color}"
-puts "candidate for adoption: #{candidate}"
-puts "and the hamsters age is: #{age}"
+puts "Fur color: #{fur_color}"
+puts "Candidate for adoption: #{candidate}"
+puts "Hamster age: #{age}"
 
 
 
