@@ -35,4 +35,18 @@ puts str
 	end
 		
 end
-encrypt("zed")
+
+ def decrypt(str)
+ 	count = 0
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	# match the str to the alphabet var's index
+
+	until count == str.length
+	a_count = alphabet.index(str[count])
+	str[count] = alphabet[a_count-=1]
+	count +=1
+	end
+
+puts str
+end
+decrypt("bcd")
