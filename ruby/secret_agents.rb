@@ -30,6 +30,11 @@ def encrypt(str)
 		str[count] = str[count].next
 		count+=1
 		end
+	else
+		until count == str.length
+		str[count] = str[count].next
+		count +=1
+		end
 puts str
 
 	end
@@ -49,4 +54,3 @@ end
 
 puts str
 end
-decrypt("bcd")
