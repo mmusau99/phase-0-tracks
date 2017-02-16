@@ -5,14 +5,7 @@
 #def encrypt(str)
 	#count = 0
 	
-#until count == str.length
 
-#str[count] = str[count].next
-#count+=1
-#end
-#puts str
-#end
-#encrypt("zed")
 
 def encrypt(str)
 	count = 0
@@ -22,6 +15,7 @@ def encrypt(str)
 		str[count] = str[count].next
 		count +=1
 		end
+		
 	puts str
 	elsif str[count] == alphabet[25]
 		str[count] = alphabet[0]
@@ -30,19 +24,23 @@ def encrypt(str)
 		str[count] = str[count].next
 		count+=1
 		end
+		
 	else
-		until count == str.length
+	  until count == str.length
 		str[count] = str[count].next
 		count +=1
 		end
-puts str
+		
+		
+ str
 
 	end
 		
 end
-
- def decrypt(str)
+def decrypt(str)
  	count = 0
+ 	a_count = 0
+ 	
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	# match the str to the alphabet var's index
 
@@ -51,6 +49,36 @@ end
 	str[count] = alphabet[a_count-=1]
 	count +=1
 	end
-
 puts str
+ str
 end
+
+
+# create a interface that asaks the user if they would like to decrypt or encrypt a message
+# then after the first choice it asks the user for a password
+# then conducts selected method  and prints the result to the screen
+choice = ""
+until choice == "Decrypt" || choice == "Encrypt"
+puts "Would you like to 'Decrypt' or 'Encrypt' a password ? type [Decrypt] or [Encrypt]"
+ choice = gets.chomp
+ choice.capitalize!
+end
+ if choice == "Decrypt"
+puts "What is the password you want to decrypt ? "
+ password = gets.chomp
+ puts
+ puts"The password you encrypted is"
+ decrypt(password)
+
+elsif choice == "Encrypt"
+puts "What is the password you want to encrypt? "
+ password = gets.chomp
+ puts
+ puts"The password you encrypted is"
+ encrypt(password)
+end
+
+ 	
+ 
+
+
