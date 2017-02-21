@@ -32,7 +32,7 @@ def consonates(new_name)
 	vowel_split = vowel_list.split('')
 	name_mixer = new_name
 	until count == new_name.length
-		if vowel_split.include?(new_name[count]) == false
+	if vowel_split.include?(new_name[count]) == false && new_name[count] != ' '
 		new_name[count] = new_name[count].next
 		count +=1
 		else
