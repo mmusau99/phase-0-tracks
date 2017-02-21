@@ -2,10 +2,9 @@
 # swapping the first and last name
 # changing all of the voewls (a,e,i,o, or u) to the next voewl in (aeiou) to the next consonant in the alpabet
 # a -> e and u-> a and d would become 'f'
-def swap(first_n, last_n) 
-	new_first_n = last_n
-	new_last_n = first_n
-	new_name = new_first_n + " " + new_last_n
+def swap(new_name) 
+	
+	new_name = new_name.split(' ').reverse
 
 end
 
@@ -20,7 +19,7 @@ def vowels(new_name)
 		  vowel_count = vowel_split.index(new_name[count])
 		 vowel_count.to_i
 		  new_name[count] = vowel_split[vowel_count+=1]
-		  puts "hello"
+		  
 		count +=1
 	  elsif new_name[count] == "u"
 	  new_name[count] = "a"
