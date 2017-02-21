@@ -2,9 +2,10 @@
 # swapping the first and last name
 # changing all of the voewls (a,e,i,o, or u) to the next voewl in (aeiou) to the next consonant in the alpabet
 # a -> e and u-> a and d would become 'f'
-def swap(new_name) 
-	
-	new_name = new_name.split(' ').reverse
+def swap(first_n, last_n) 
+	new_first_n = last_n
+	new_last_n = first_n
+	new_name = new_first_n + " " + new_last_n
 
 end
 
@@ -51,4 +52,23 @@ def consonates(new_name)
 	
 new_name
 end
-vowels("Mumo")
+first_name_alias = nil 
+last_name_alias = nil
+until first_name_alias == "Exit" || last_name_alias == "Exit"
+puts "Enter the first name you would like to create an alias out of (Type 'exit' to escape)"
+first_name_alias = gets.chomp
+first_name_alias.capitalize!
+if first_name_alias == "Exit"
+break;
+end
+puts 
+puts "Enter the last name you would like to create an alias out of. (Type 'exit' to escape)"
+last_name_alias = gets.chomp
+last_name_alias.capitalize!
+if last_name_alias == "Exit"
+  break;
+end
+converted_name = consonates(vowels(swap(first_name_alias,last_name_alias)))
+puts
+puts "your new alias is #{converted_name} "
+end
