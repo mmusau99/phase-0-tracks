@@ -11,19 +11,28 @@ end
 
 def vowels(new_name)
 	count = 0
+	vowel_count = 0
 	vowel_list = "aeiou"
 	vowel_split = vowel_list.split('')
 	until count == new_name.length
-		if new_name[count] == vowel_split[0..-1]
-		end
+		if new_name[count] == "a" || new_name[count] == "e" || new_name[count] == "i" || 
+		new_name[count] == "o"
+		  vowel_count = vowel_split.index(new_name[count])
+		 vowel_count.to_i
+		  new_name[count] = vowel_split[vowel_count+=1]
+		  puts "hello"
+		count +=1
+	  elsif new_name[count] == "u"
+	  new_name[count] = "a"
+	  count+=1
+	else
+	  count+=1
+	end
 	end
 	
-
-
-
 	
-
-
+ 
+ new_name
 end
 
 def consonates(new_name)
@@ -32,7 +41,7 @@ def consonates(new_name)
 	vowel_split = vowel_list.split('')
 	name_mixer = new_name
 	until count == new_name.length
-	if vowel_split.include?(new_name[count]) == false && new_name[count] != ' '
+		if vowel_split.include?(new_name[count]) == false && new_name[count] != ' '
 		new_name[count] = new_name[count].next
 		count +=1
 		else
@@ -43,5 +52,4 @@ def consonates(new_name)
 	
 new_name
 end
-
-consonates(swap("Mumo","Musau"))
+vowels("Mumo")
