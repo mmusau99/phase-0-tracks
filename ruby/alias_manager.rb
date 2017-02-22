@@ -54,11 +54,18 @@ new_name
 end
 first_name_alias = nil 
 last_name_alias = nil
+alias_array = [
+  
+  ]
+  
+
 until first_name_alias == "Exit" || last_name_alias == "Exit"
 puts "Enter the first name you would like to create an alias out of (Type 'exit' to escape)"
 first_name_alias = gets.chomp
 first_name_alias.capitalize!
 if first_name_alias == "Exit"
+   puts
+  p alias_array
 break;
 end
 puts 
@@ -66,9 +73,14 @@ puts "Enter the last name you would like to create an alias out of. (Type 'exit'
 last_name_alias = gets.chomp
 last_name_alias.capitalize!
 if last_name_alias == "Exit"
+  puts
+  p alias_array
   break;
 end
+full_name = first_name_alias + " " + last_name_alias
 converted_name = consonates(vowels(swap(first_name_alias,last_name_alias)))
+alias_array.push(full_name,converted_name)
 puts
 puts "your new alias is #{converted_name} "
+puts
 end
