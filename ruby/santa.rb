@@ -21,3 +21,9 @@ class Santa
 	
 	
 end
+santas =[]
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "gender nonconforming","gender variant"]
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "hype-beast", "clown"]
+genders.length.times do |i|
+  santas << Santa.new(genders[i], ethnicities[i])
+end
