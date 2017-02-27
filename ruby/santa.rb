@@ -1,7 +1,7 @@
 class Santa
    reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet","Cupid", "Donner","Blitzen"]
-   
-	  
+   attr_reader :age, :gender, :ethnicity
+	  attr_writer :gender
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 
@@ -16,7 +16,7 @@ class Santa
 		puts "Initializing Santa instance ..."
 		@gender = gender
 		@ethnicity = ethnicity
-		@age = 0
+		@age = rand(140)
 
 	end
 	
@@ -29,26 +29,22 @@ class Santa
 	  reindeer_ranking << name
 	end
 	
-	def age
-	  @age
-	end
-	def gender
-	  @gender
-	end
-	def ethnicity
-	  @ethnicity
-  end
-  def gender=(new_gender)
-    @gender = gender
-  end
+  
 end
 santas =[]
 genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "gender nonconforming","gender variant"]
 ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "hype-beast", "clown"]
-genders.length.times do |i|
-  santas << Santa.new(genders[i], ethnicities[i])
+100.times do 
+  santas << Santa.new(genders[rand(genders.length)], ethnicities[rand(genders.length)])
 end
 Mumo = Santa.new("Male","Black")
-Mumo.age
-Mumo.gender = "BLMale"
-Mumo.ethnicity
+santas.each do |santa|
+
+puts
+p santa.age
+puts
+p santa.gender
+puts
+p santa.ethnicity
+
+end
