@@ -21,7 +21,7 @@ class Santa
 	end
 	
 	def celebrate_birthday
-	  age+=1
+	  @age+=1
 	end
 	
 	def get_mad_at(name)
