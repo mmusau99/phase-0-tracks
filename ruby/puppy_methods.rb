@@ -65,7 +65,7 @@ end
 #moonlight = Movie.new
 
 #moonlight.watched_movie("no")
-#moonlight.times_watched(4)
+#moonlight.times_watched(5)
 
 movie_list = []
 
