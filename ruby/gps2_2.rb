@@ -18,6 +18,9 @@ def add_item(additional_item, quantity=nil)
     additional_item_list.map! do |additional_item|
     $grocery_list << additional_item
     end
+    additional_item_list.length.times do
+   $quantity << 1
+ end
     $grocery_list
   elsif additional_item.class == String && quantity == nil
     
@@ -50,7 +53,9 @@ def update_quantity(item,quantity)
    $full_list
 end
 
-
+def print_list
+   $full_list = [$grocery_list, $quantity]
+end
 
 
 create_list("carrots apples")
