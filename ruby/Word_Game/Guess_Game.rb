@@ -42,21 +42,21 @@ class Word_game
   
 end
 word_game_counter = 0
+correct_word = ""
 player_word = nil
 Player_1 = Word_game.new
 
   puts "What word would you like the other player to guess."
   require 'io/console'
-  player_word = STDIN.noecho(&:gets).chom
+  player_word = STDIN.noecho(&:gets).chomp
   player_word.upcase!
-  until Player_1.guess_count == player_word.length
+  until Player_1.guess_count == player_word.length+3
     if player_word.length > 8
     puts "The word #{player_word} is longer than 8 characters. Please try again"
     end
   Player_1.word_guess(player_word)
  
-  puts "Next player please guess a letter of the word "
-  require'io/console'
+  puts "Next player please guess a letter of the word, you only have as many chances as the length of the word. plus three mistakes"
   next_player_guess = gets.chomp
   next_player_guess.capitalize!
   
@@ -69,12 +69,12 @@ Player_1 = Word_game.new
     
     
       guessing_word[index_of_letter] = next_player_guess
-      
+      correct_word[index_of_letter] = next_player_guess
       puts "#{guessing_word.join(" ")} is within the word"
       
       Player_1.increment_guess_count
        Player_1.increment_correct_count
-        if Player_1.correct_count == player_word.length
+        if Player_1.selected_word == correct_word
           puts "Congratulations you guessed the word #{Player_1.selected_word}!"
           break;
         end
