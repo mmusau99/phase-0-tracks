@@ -21,4 +21,11 @@ var reverse = function (string){
  console.log(string)
 return  string;
 }
-reverse("hello");
+
+var word = prompt("What word would you like to reverse ?");
+reverse(word);
+if (1+1 == 2){
+  console.log(" ")
+  console.log("Hey 1+1 does in fact equal 2. your word is "+ word);
+}
+
