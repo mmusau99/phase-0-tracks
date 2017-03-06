@@ -16,6 +16,7 @@ var reverse = function (string){
     string[i] = string_copy[string_counter-1];
     string_counter -=1
   }
-  console.log(string);
+ string = string.toString();
+return  string;
 }
 reverse("hello");
