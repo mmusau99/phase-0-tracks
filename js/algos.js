@@ -67,7 +67,7 @@ var word_mash = function (int) {
   var random_words =[];
   var random_word = [];
   var i = 0;
-  var j = 0
+  var j = 0;
   while (j < int) {
     while (i < Math.floor((Math.random()*9)+1)){
     random_word.push(alphabet[Math.floor(Math.random()*26)]);
