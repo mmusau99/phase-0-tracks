@@ -61,3 +61,34 @@ object_4 = create_hash("Zo", 33);
 
 console.log(match_hash(object_1, object_2));
 console.log(match_hash(object_3, object_4));
+
+var word_mash = function (int) {
+  var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  var random_words =[];
+  var random_word = [];
+  var i = 0;
+  var j = 0
+  while (j < int) {
+    while (i < Math.floor((Math.random()*9)+1)){
+    random_word.push(alphabet[Math.floor(Math.random()*26)]);
+    i+=1;
+    }
+    random_words.push(random_word.join(""))
+    j+=1;
+  }
+  
+   //console.log(alphabet[Math.floor(Math.random()*26)+1]);
+ console.log(random_words);
+ return random_words;
+}
+for (t=1; t < 11; t++) {
+var array_1 = word_mash(3);
+console.log ("this array is "  + array_1);
+console.log("");
+console.log("the longest word in this array is " + longest_String(array_1));
+console.log("");
+console.log(t);
+
+}
+
+
