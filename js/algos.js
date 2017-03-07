@@ -3,7 +3,6 @@ I want to pass an array to a function that checks
 the length of each string within an array, and returns the string with the longest length. 
 I want to use an empty array and push the value of the longest word in the first index.
 */
-
 var longest_String = function (array) {
   var array_length_1 = 0;
   var longest_word = [];
@@ -16,6 +15,9 @@ var longest_String = function (array) {
         array_lenght_1 = array[i].length;
         longest_word[0] = array[i];
       }
+    else if (array[i+1].length > array[i].length) {
+      longest_word[0] = array[i+1];
+    }
       
       
   }
