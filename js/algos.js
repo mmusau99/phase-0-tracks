@@ -53,6 +53,9 @@ var match_hash = function (hash_1, hash_2){
 }
 
 object_1 = create_hash("mumo", 54);
-object_2 = create_hash("phill", 27);
+object_2 = create_hash("Allen", 27);
+object_3 = create_hash("Kingsly", 33);
+object_4 = create_hash("Zo", 33);
 
-match_hash(object_1, object_2);
+console.log(match_hash(object_1, object_2));
+console.log(match_hash(object_3, object_4));
