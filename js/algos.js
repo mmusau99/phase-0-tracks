@@ -81,4 +81,14 @@ var word_mash = function (int) {
  console.log(random_words);
  return random_words;
 }
+for (t=1; t < 11; t++) {
+var array_1 = word_mash(3);
+console.log ("this array is "  + array_1);
+console.log("");
+console.log("the longest word in this array is " + longest_String(array_1));
+console.log("");
+console.log(t);
+
+}
+
 
