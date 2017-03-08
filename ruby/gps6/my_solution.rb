@@ -7,9 +7,17 @@
 #
 #
 require_relative 'state_data'
-
+=begin
+require_relative allows us to use the file relative to the folder, hence if my_solution and state_data are
+in relative folders, then we can use require relative without specifiing a direct path. require requires us to use a direct
+file path to locate a file.
+=end
 class VirusPredictor
-
+=begin
+=end	
+rescue Exception => e
+	
+end
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
