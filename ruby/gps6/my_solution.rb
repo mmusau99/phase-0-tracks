@@ -90,3 +90,23 @@ end
 
 #=======================================================================
 # Reflection Section
+=begin
+  
+the first synatax using the hash rocket uses a string data type, so the value can be called.
+require_relative allows you to call a file relative to the directory, instead of having to specify the file path using
+require.
+you can iterate through a hash using a block of code. specifying the hash_key and value. or using a loop, the easies way
+is using the .each method. 
+
+the virus_effects variables passed on the parameters were attributes already assigned during initailization. 
+they did not require to be passed along, because those values remain constant throughtout the scope of the method.
+
+I solidified my perspective on multidimensional hashes during this challenge. coneptually multidimensional arrays I understand,
+but I needed to touch up on key value pairs of hashes. 
+
+also recognizing that two different actions were being processed within those methods, and learning to split up the print statements.
+
+  
+=end
+
+
