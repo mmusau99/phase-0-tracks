@@ -14,8 +14,10 @@ file path to locate a file.
 =end
 class VirusPredictor
 =begin
+the initalize method sets attributes ie (state, population-density, population) 
+creates a new instance of virus predictor, and assigns attributes based on the arguments passed.
 =end	
-rescue Exception => e
+
 	
 end
   def initialize(state_of_origin, population_density, population)
@@ -23,12 +25,21 @@ end
     @population = population
     @population_density = population_density
   end
+=begin
+virus effects calls the two methods predicted_deaths and speed_of_spread	
 
+=end	
+end
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
-
+=begin
+	
+gets population attributes and sets the number of deaths based on population density and population. with a number
+of ranges.
+	
+=end
   private
 
   def predicted_deaths(population_density, population, state)
@@ -48,6 +59,11 @@ end
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
+=begin
+ based on the population density. it determines how fast the virus will spread, based on various ranges. 	
+  
+  	
+=end
 
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
