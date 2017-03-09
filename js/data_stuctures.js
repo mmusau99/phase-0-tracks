@@ -30,7 +30,7 @@ var Car = function (brand, type, miles){
  this.turn_on = function() {
     console.log("VROOOOOOOOOOOMMMM!!!!");
     console.log("");
-    console.log("A new "+brand +" " + "has been manufactored");
+    console.log("A new "+brand +" " + "has been manufactured");
     console.log(" ")
   }
   
