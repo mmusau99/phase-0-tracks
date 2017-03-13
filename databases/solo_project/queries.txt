@@ -1,65 +1,86 @@
-sqlite> SELECT * FROM customer;
-1|Mumo|true
-2|Bam|false
-3|Khun|true
-4|Enryu|true
-5|Jahad|false
-6|Ran|true
-7|Hoaquin|false
+* SELECT * FROM customer;
+1|Bam|true
+2|Enryu|false
+3|Hoaquin|true
+4|Khun|false
+5|Urek|true
+6|Yuri|false
+7|Anak|true
 
-UPDATE order_table SET product="apple" WHERE order_id=4;
 
-sqlite> SELECT name, product
-   ...> FROM customer, order_table
-   ...> ;
+* SELECT * FROM customer, order_table;
+1|Bam|true|1|cheese burger|2|1
+1|Bam|true|2|red velvet cake|2|2
+1|Bam|true|3|Souls|200|3
+1|Bam|true|4|apple|1|4
+1|Bam|true|5|italian beef|4|5
+1|Bam|true|6|crabs|6|6
+1|Bam|true|7|greek salad|2|7
+2|Enryu|false|1|cheese burger|2|1
+2|Enryu|false|2|red velvet cake|2|2
+2|Enryu|false|3|Souls|200|3
+2|Enryu|false|4|apple|1|4
+2|Enryu|false|5|italian beef|4|5
+2|Enryu|false|6|crabs|6|6
+2|Enryu|false|7|greek salad|2|7
+3|Hoaquin|true|1|cheese burger|2|1
+3|Hoaquin|true|2|red velvet cake|2|2
+3|Hoaquin|true|3|Souls|200|3
+3|Hoaquin|true|4|apple|1|4
+3|Hoaquin|true|5|italian beef|4|5
+3|Hoaquin|true|6|crabs|6|6
+3|Hoaquin|true|7|greek salad|2|7
+4|Khun|false|1|cheese burger|2|1
+4|Khun|false|2|red velvet cake|2|2
+4|Khun|false|3|Souls|200|3
+4|Khun|false|4|apple|1|4
+4|Khun|false|5|italian beef|4|5
+4|Khun|false|6|crabs|6|6
+4|Khun|false|7|greek salad|2|7
+5|Urek|true|1|cheese burger|2|1
+5|Urek|true|2|red velvet cake|2|2
+5|Urek|true|3|Souls|200|3
+5|Urek|true|4|apple|1|4
+5|Urek|true|5|italian beef|4|5
+5|Urek|true|6|crabs|6|6
+5|Urek|true|7|greek salad|2|7
+6|Yuri|false|1|cheese burger|2|1
+6|Yuri|false|2|red velvet cake|2|2
+6|Yuri|false|3|Souls|200|3
+6|Yuri|false|4|apple|1|4
+6|Yuri|false|5|italian beef|4|5
+6|Yuri|false|6|crabs|6|6
+6|Yuri|false|7|greek salad|2|7
+7|Anak|true|1|cheese burger|2|1
+7|Anak|true|2|red velvet cake|2|2
+7|Anak|true|3|Souls|200|3
+7|Anak|true|4|apple|1|4
+7|Anak|true|5|italian beef|4|5
+7|Anak|true|6|crabs|6|6
+7|Anak|true|7|greek salad|2|7
 
-Mumo|burger
-Mumo|philly cheestake
-Mumo|pizza
-Mumo|apple
-Mumo|naan
-Mumo|doughnut
-Mumo|souls
-Bam|burger
-Bam|philly cheestake
-Bam|pizza
-Bam|apple
-Bam|naan
-Bam|doughnut
-Bam|souls
-Khun|burger
-Khun|philly cheestake
-Khun|pizza
-Khun|apple
-Khun|naan
-Khun|doughnut
-Khun|souls
-Enryu|burger
-Enryu|philly cheestake
-Enryu|pizza
-Enryu|apple
-Enryu|naan
-Enryu|doughnut
-Enryu|souls
-Jahad|burger
-Jahad|philly cheestake
-Jahad|pizza
-Jahad|apple
-Jahad|naan
-Jahad|doughnut
-Jahad|souls
-Ran|burger
-Ran|philly cheestake
-Ran|pizza
-Ran|apple
-Ran|naan
-Ran|doughnut
-Ran|souls
-Hoaquin|burger
-Hoaquin|philly cheestake
-Hoaquin|pizza
-Hoaquin|apple
-Hoaquin|naan
-Hoaquin|doughnut
-Hoaquin|souls
-sqlite> 
+
+
+
+
+
+
+
+
+
+
+
+*UPDATE order_table SET product="apple" WHERE order_id=4;
+
+*SELECT * FROM customer, order_table WHERE order_table.customer_id = customer.customer_id;
+1|Bam|true|1|cheese burger|2|1
+2|Enryu|false|2|red velvet cake|2|2
+3|Hoaquin|true|3|Souls|200|3
+4|Khun|false|4|Filet Mignon|1|4
+5|Urek|true|5|italian beef|4|5
+6|Yuri|false|6|crabs|6|6
+7|Anak|true|7|greek salad|2|7
+
+*INSERT INTO customer (customer_id, name, new_customer) values (8, "prince", "false");
+DELETE FROM customer
+WHERE name= "prince";
