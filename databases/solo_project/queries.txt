@@ -1,65 +1,21 @@
 sqlite> SELECT * FROM customer;
-1|Mumo|true
-2|Bam|false
-3|Khun|true
-4|Enryu|true
-5|Jahad|false
-6|Ran|true
-7|Hoaquin|false
+1|Bam|true
+2|Enryu|false
+3|Hoaquin|true
+4|Khun|false
+5|Urek|true
+6|Yuri|false
+7|Anak|true
+
 
 UPDATE order_table SET product="apple" WHERE order_id=4;
 
-sqlite> SELECT name, product
-   ...> FROM customer, order_table
-   ...> ;
-
-Mumo|burger
-Mumo|philly cheestake
-Mumo|pizza
-Mumo|apple
-Mumo|naan
-Mumo|doughnut
-Mumo|souls
-Bam|burger
-Bam|philly cheestake
-Bam|pizza
-Bam|apple
-Bam|naan
-Bam|doughnut
-Bam|souls
-Khun|burger
-Khun|philly cheestake
-Khun|pizza
-Khun|apple
-Khun|naan
-Khun|doughnut
-Khun|souls
-Enryu|burger
-Enryu|philly cheestake
-Enryu|pizza
-Enryu|apple
-Enryu|naan
-Enryu|doughnut
-Enryu|souls
-Jahad|burger
-Jahad|philly cheestake
-Jahad|pizza
-Jahad|apple
-Jahad|naan
-Jahad|doughnut
-Jahad|souls
-Ran|burger
-Ran|philly cheestake
-Ran|pizza
-Ran|apple
-Ran|naan
-Ran|doughnut
-Ran|souls
-Hoaquin|burger
-Hoaquin|philly cheestake
-Hoaquin|pizza
-Hoaquin|apple
-Hoaquin|naan
-Hoaquin|doughnut
-Hoaquin|souls
+ SELECT * FROM customer, order_table WHERE order_table.customer_id = customer.customer_id;
+1|Bam|true|1|cheese burger|2|1
+2|Enryu|false|2|red velvet cake|2|2
+3|Hoaquin|true|3|Souls|200|3
+4|Khun|false|4|Filet Mignon|1|4
+5|Urek|true|5|italian beef|4|5
+6|Yuri|false|6|crabs|6|6
+7|Anak|true|7|greek salad|2|7
 sqlite> 
