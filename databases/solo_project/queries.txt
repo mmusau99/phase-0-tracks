@@ -84,3 +84,50 @@
 *INSERT INTO customer (customer_id, name, new_customer) values (8, "prince", "false");
 DELETE FROM customer
 WHERE name= "prince";
+
+
+
+
+*SELECT customer.customer_id, order_table.product
+   ...> FROM customer
+   ...> INNER JOIN order_table
+   ...> ON order_table.customer_id=customer.customer_id;
+1|cheese burger
+2|red velvet cake
+3|Souls
+4|apple
+5|italian beef
+6|crabs
+7|greek salad
+ 
+
+
+*SELECT customer.name, order_table.product
+   ...> FROM customer
+   ...> INNER JOIN order_table
+   ...> ON order_table.customer_id= customer.customer_id;
+Bam|cheese burger
+Enryu|red velvet cake
+Hoaquin|Souls
+Khun|apple
+Urek|italian beef
+Yuri|crabs
+Anak|greek salad
+
+
+
+
+*SELECT customer.name, order_table.product, order_table.quantity
+   ...> FROM customer
+   ...> INNER JOIN order_table
+   ...> ON order_table.customer_id= customer.customer_id;
+Bam|cheese burger|2
+Enryu|red velvet cake|2
+Hoaquin|Souls|200
+Khun|apple|1
+Urek|italian beef|4
+Yuri|crabs|6
+Anak|greek salad|2
+sqlite> 
+
+
