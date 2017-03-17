@@ -26,10 +26,10 @@ SQL
 
 fantasy_soccer.execute(teams_schema)
 fantasy_soccer.execute(players_schema)
-def create_team (DB, team_name, team_rating)
-	fantasy_soccer.execute("INSERT INTO team (team_name, team_rating) VALUES (?, ?)", [team_name, team_rating]
-		
-	end
+def create_team (db, team_name, team_rating)
+	fantasy_soccer.execute("INSERT INTO team (team_name, team_rating) VALUES (?, ?)", [team_name, team_rating])
 
-def create_players(DB,name, number, position, team)
+end
+
+def create_players(db,name, number, position, team)
 	end
