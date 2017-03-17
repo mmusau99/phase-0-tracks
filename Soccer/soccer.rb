@@ -9,8 +9,20 @@ id INTEGER PRIMARY KEY,
 name VARCHAR(255),
 number INT,
 age INT,
-position VARCHAR(255)
-
-)
-
+position VARCHAR(255),
+team_id INT,
+FOREIGN KEY (team_id) REFERENCES team(id)
+);
 SQL
+
+teams_schema = <<-SQL
+CREATE TABLE iF NOT EXISTS team (
+id INTEGER PRIMARY KEY, 
+team_name VARCHAR(255),
+team_rating INT
+
+);
+SQL
+
+fantasy_soccer.execute(teams_schema)
+fantasy_soccer.execute(players_schema)
