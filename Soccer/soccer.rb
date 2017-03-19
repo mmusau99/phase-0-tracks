@@ -38,9 +38,9 @@ number_of_teams. times do
 	
 end
 def create_players(db,name, number, position, team_id)
-	db.execute("INSERT INTO players (name, number, age, position) VALUES (?,?,?,?, ?)", [name, number, position, team_id])
+	db.execute("INSERT INTO players (name, number, age, position, team_id) VALUES (?,?,?,?, ?)", [name, number, position, team_id])
 
 	end
 4. times do
-	create_players(fantasy_soccer,Faker::GameOfThrones.character,Faker::Number.between(1,11),position[Random.rand(0..8)], Random.rand(0..2)  )
+	create_players(fantasy_soccer,Faker::GameOfThrones.character,Faker::Number.between(1,11),position[Random.rand(0..7)], Random.rand(1..2)  )
 end
