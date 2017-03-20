@@ -41,6 +41,35 @@ def create_players(db,name, number, position, team_id)
 	db.execute("INSERT INTO players (name, number, age, position, team_id) VALUES (?,?,?,?, ?)", [name, number, position, team_id])
 
 	end
-4. times do
-	create_players(fantasy_soccer,Faker::GameOfThrones.character,Faker::Number.between(1,11),position[Random.rand(0..7)], Random.rand(1..2)  )
+11. times do
+	create_players(fantasy_soccer,Faker::GameOfThrones.character,Faker::Number.between(1,11),position[Random.rand(0..7)], 1  )
 end
+11. times do
+	create_players(fantasy_soccer,Faker::GameOfThrones.character,Faker::Number.between(1,11),position[Random.rand(0..7)], 2 )
+
+end
+team_1_select = <<-SQL
+SELECT team_rating 
+FROM team
+WHERE id = 1;
+SQL
+team_2_select = <<-SQL
+SELECT team_rating
+FROM team
+WHERE id=2;
+SQL
+team_1 = fantasy_soccer.execute(team_1_select)
+team_2 = fantasy_soccer.execute(team_2_select)
+puts team_1[0]
+
+if team_1.join.to_i > team_2.join.to_i
+puts "The Greatest soccer match the game of thrones universe has ever seen was won by team 1"
+else
+puts "The Greatest soccer match the game of thrones universe has ever seen was won by team 2"
+
+end
+
+
+
+
+
