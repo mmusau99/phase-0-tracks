@@ -11,4 +11,4 @@
 
 * #5. If I run into specific problems I'll search for desired solutions.
 
-* I found using a mixture of strategies worked for me. I first watched a beginner tutorial on jquery. I then had to figure out how to initialize jquery within my file, so i took that time to look up documentation on W3schools. Then i created a test index file and start playing around with jquery methods and functions.
+* I found using a mixture of strategies worked for me. I first watched a beginner tutorial on jquery. I then had to figure out how to initialize jquery within my file, so i took that time to look up documentation on W3schools. Then i created a test index file and start playing around with jquery methods and functions..
