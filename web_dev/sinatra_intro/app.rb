@@ -44,3 +44,26 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+get '/contact/:address' do 
+  address = params[:address]
+  "your address is #{address}"
+   
+end
+
+get '/great_job/:name' do 
+
+  student_name = db.execute("SELECT students.name FROM students WHERE name=?", [params[:name]])
+  if student_name != []
+  student_name.to_s
+  p student_name
+  response =""
+  student_name.each do |student|
+    response << "#{student ['name']}<br>"
+  end
+
+  "Good job, #{response}"
+else
+  "Good job!"
+
+end
+end
