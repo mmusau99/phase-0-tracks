@@ -58,12 +58,24 @@ get '/great_job/:name' do
   p student_name
   response =""
   student_name.each do |student|
-    response << "#{student ['name']}<br>"
+    response << "#{student ['name']}"
   end
 
-  "Good job, #{response}"
+  "Good job, #{response}!"
 else
   "Good job!"
 
 end
+end
+
+get '/addition/' do 
+  num1 = params[:num_1]
+  num2 = params[:num_2]
+  sum = num1.to_i + num2.to_i
+
+  sum.to_s
+  "The sum of #{num1} and #{num2} is #{sum}"
+
+
+   
 end
